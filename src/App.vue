@@ -1,30 +1,22 @@
 <template>
     <div id="app">
         <Header></Header>
-        <Breadcrumb
-            name="测试"
-            slug="test"
-            root="/test"
-            :publishEnable="true"
-            :adminEnable="true"
-            :feedbackEnable="true"
-            :crumbEnable="true"
-        >
-            <img slot="logo" svg-inline :src="getAppIcon('macro')" />
+        <Breadcrumb name="竞技" slug="pvp" root="/pvp" :publishEnable="false" :adminEnable="false" :feedbackEnable="true" :crumbEnable="true">
+            <img slot="logo" svg-inline :src="getAppIcon('sandbox')" />
         </Breadcrumb>
-        <LeftSidebar>left side</LeftSidebar>
-        <Main :withoutRight="false">
+        <LeftSidebar><Nav /></LeftSidebar>
+        <Main :withoutRight="true">
             <div class="m-main">
                 <router-view />
             </div>
-            <RightSidebar>right side</RightSidebar>
             <Footer></Footer>
         </Main>
     </div>
 </template>
 
 <script>
-import {getAppIcon} from '@jx3box/jx3box-common/js/utils'
+import Nav from "@/components/Nav.vue";
+import { getAppIcon } from "@jx3box/jx3box-common/js/utils";
 export default {
     name: "App",
     props: [],
@@ -32,16 +24,11 @@ export default {
         return {};
     },
     computed: {},
-    methods: {getAppIcon},
-    components: {},
+    methods: { getAppIcon },
+    components: { Nav },
 };
 </script>
 
 <style lang="less">
-@import "./assets/css/app.less";
-@media screen and (max-width: @phone) {
-    .c-crumb {
-        .none;
-    }
-}
+@import "~@/assets/css/app.less";
 </style>

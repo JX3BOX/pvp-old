@@ -1,12 +1,12 @@
 <template>
-    <div class="v-fn">
-
+    <div class="v-sandbox">
+        阵营沙盘
     </div>
 </template>
 
 <script>
     export default {
-        name : 'Fn',
+        name : 'Sandbox',
         props:[],
         data : function(){
             return {
@@ -23,5 +23,5 @@
 </script>
 
 <style lang="less">
-    // @import '../assets/css/fn.less';
+    @import '~@/assets/css/sandbox.less';
 </style>
