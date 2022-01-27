@@ -12,7 +12,7 @@
                 <template slot="title">阵营</template>
                 <el-menu-item-group>
                     <el-menu-item index="1-2" :class="{ 'is-active': active == 'sandbox' }">
-                        <a :href="getAppLink('sandbox')"> <i class="el-icon-data-line"></i>阵营沙盘 </a>
+                        <router-link to="/sandbox"> <i class="el-icon-data-line"></i>阵营沙盘 </router-link>
                     </el-menu-item>
                 </el-menu-item-group>
             </el-submenu>
@@ -27,35 +27,35 @@ export default {
     components: {},
     data: function () {
         return {
-            active: "",
+            active: "sandbox",
         };
     },
     computed: {},
     watch: {},
     methods: {
-        getAppType: function () {
-            let arr = location.pathname?.split("/");
-            let type = "";
-            for (let str of arr) {
-                if (str && str != "pvx") {
-                    type = str;
-                    break;
-                }
-            }
-            return type;
-        },
-        getAppLink: function (appKey) {
-            let isDev = location.hostname == "localhost";
-            if (isDev) {
-                return `/${appKey}/`;
-            } else {
-                return `/pvx/${appKey}/`;
-            }
-        },
+        // getAppType: function () {
+        //     let arr = location.pathname?.split("/");
+        //     let type = "";
+        //     for (let str of arr) {
+        //         if (str && str != "pvp") {
+        //             type = str;
+        //             break;
+        //         }
+        //     }
+        //     return type;
+        // },
+        // getAppLink: function (appKey) {
+        //     let isDev = location.hostname == "localhost";
+        //     if (isDev) {
+        //         return `/${appKey}/`;
+        //     } else {
+        //         return `/pvp/${appKey}/`;
+        //     }
+        // },
     },
     filters: {},
     created: function () {
-        this.active = this.getAppType();
+        // this.active = this.getAppType();
     },
     mounted: function () {},
 };
