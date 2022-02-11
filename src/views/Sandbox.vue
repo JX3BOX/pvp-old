@@ -29,7 +29,7 @@ export default {
 
 			id: 1,
 			camp: "haoqi",
-			route: false,
+			route: true,
 
 			showLog: false,
 		};

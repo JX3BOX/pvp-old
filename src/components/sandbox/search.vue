@@ -19,7 +19,7 @@ export default {
 			id: 1,
 			camp: "haoqi",
 			camps: { haoqi: "浩气盟", eren: "恶人谷" },
-			route: false,
+			route: true,
 		};
 	},
 	computed: {
