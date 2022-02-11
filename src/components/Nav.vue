@@ -12,7 +12,7 @@
                 <template slot="title">阵营</template>
                 <el-menu-item-group>
                     <el-menu-item index="1-2" :class="{ 'is-active': active == 'sandbox' }">
-                        <router-link to="/sandbox"> <i class="el-icon-data-line"></i>阵营沙盘 </router-link>
+                        <router-link to="/sandbox"> <i class="el-icon-data-line"></i>沙盘查询</router-link>
                     </el-menu-item>
                 </el-menu-item-group>
             </el-submenu>
